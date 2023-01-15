@@ -1,31 +1,32 @@
 # Docker Dev Env
 
-## How to Pull a Docker Image
+## How to Use??
+
+### 1. Pull a Docker Image
 ```
 docker pull ajtwlswjddnv/dev
 ```
 
-## How to Build
+### 2. Run
 ```
-docker build -t dev .
-```
-
-## How to Run
-```
-docker run -itd --name dev dev
+docker run -itd --name ajtwlswjddnv/dev dev
 ```
 
-## How to Access
+### 3. Access
 ```
-docker exec -itd dev bash
-```
-
-## How to Save
-```
-docker save dev -o dockerimage_dev_env.tar
+docker exec -itd ajtwlswjddnv/dev bash
 ```
 
-## How to Load
+---
+
+## How to Development??
+
+### 1. Build
 ```
-docker load -i dev.tar
+docker build -t ajtwlswjddnv/dev .
+```
+
+### 2. Push
+```
+docker push ajtwlswjddnv/dev
 ```

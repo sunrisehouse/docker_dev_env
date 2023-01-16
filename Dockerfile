@@ -4,10 +4,6 @@ ENV HOME_DIR '/root'
 
 WORKDIR ${HOME_DIR}
 
-RUN mkdir -p ${HOME_DIR}/sunrisehouse/project
-RUN mkdir -p ${HOME_DIR}/local/project
-RUN mkdir -p ${HOME_DIR}/callabtech/project
-
 RUN apt -y update
 RUN apt -y upgrade
 RUN apt-get -y update
@@ -17,7 +13,8 @@ RUN apt-get -y install curl
 RUN apt-get install -y software-properties-common
 RUN apt-get install -y git
 RUN curl -sl https://deb.nodesource.com/setup_18.x | bash -E - && \
-    apt install -y nodejs
+    apt install -y nodejs && \
+    npm install --global yarn
 RUN python3 --version && \
     apt install -y python3-pip && \
     apt install -y build-essential libssl-dev libffi-dev python3-dev && \

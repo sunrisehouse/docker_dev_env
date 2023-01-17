@@ -49,14 +49,6 @@ RUN curl ${NEOVIM_DOWNLOAD_URL} -fLo ./nvim-linux64.deb && \
     source ~/.bashrc && \
     # install other language server
     npm install -g typescript typescript-language-server && \
-    npm install -g pyright && \
-    # install fonts
-    apt install -y unzip
-    apt install -y fontconfig
-    mkdir -p ${HOME_DIR}/.local/share/fonts && \
-    curl -fLo ${HOME_DIR}/.local/share/fonts/RobotoMono.zip --create-dirs https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/RobotoMono.zip && \
-    unzip ${HOME_DIR}/.local/share/fonts/RobotoMono.zip && \
-    fc-cache -fv
-
+    npm install -g pyright
     
     
